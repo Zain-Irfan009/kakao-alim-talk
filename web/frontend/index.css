@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.tgl {
+    display: none;
+}
+
+.tgl+.tgl-btn {
+    outline: 0;
+    display: block;
+    width: 3em;
+    height: 1.7em;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tgl+.tgl-btn:after,
+.tgl+.tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+
+.tgl+.tgl-btn:after {
+    left: 0;
+}
+
+.tgl+.tgl-btn:before {
+    display: none;
+}
+
+.tgl:checked+.tgl-btn:after {
+    left: 50%;
+}
+
+.tgl-light+.tgl-btn {
+    background: #F0F0F0;
+    border-radius: 2em;
+    padding: 2px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.tgl-light+.tgl-btn:after {
+    border-radius: 50%;
+    background: #fff;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.tgl-light:checked+.tgl-btn {
+    background: var(--p-color-bg-fill-brand);
+}
+
+.tgl:disabled+.tgl-btn {
+    color: var(--p-color-bg-fill-brand-active);
+}
+
+.main-container {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ck-content {
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.editor-container_inline-editor .editor-container__editor {
+    min-width: 795px;
+    max-width: 795px;
+}
+
+.ck-editor__editable_inline {
+    min-height: 250px;
+}
+
+.ck.ck-balloon-panel.ck-balloon-panel_position_border-side_right.ck-powered-by-balloon {
+    display: none !important;
+}
+
+.ck.ck-reset.ck-dropdown__panel.ck-dropdown__panel_se {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable,
+.ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
